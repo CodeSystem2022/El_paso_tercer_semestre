@@ -3,7 +3,7 @@ package ar.com.system2023.mundopc;
 public class Monitor {
     private final int idMonitor;
     private String marca;
-    private double size;
+    private double tamanio;
     private static int contadorMonitores;
 
     private Monitor(){
@@ -11,10 +11,10 @@ public class Monitor {
 
     }
 
-    public Monitor(String marca, double size){
+    public Monitor(String marca, double tamanio){
         this();//llamado al constructor vacío
         this.marca= marca;
-        this.size = size;
+        this.tamanio = tamanio;
     }
 
     public String getMarca() {
@@ -25,12 +25,12 @@ public class Monitor {
         this.marca = marca;
     }
 
-    public double getSize() {
-        return size;
+    public double gettamanio() {
+        return tamanio;
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    public void settamanio(double tamanio) {
+        this.tamanio = tamanio;
     }
 
     //Ingresamos manualmente el getIdMonitor
@@ -43,7 +43,7 @@ public class Monitor {
         return "Monitor{" +
                 "idMonitor=" + idMonitor +
                 ", marca='" + marca + '\'' +
-                ", size=" + size +
+                ", tamanio=" + tamanio +
                 '}';
     }
 }
