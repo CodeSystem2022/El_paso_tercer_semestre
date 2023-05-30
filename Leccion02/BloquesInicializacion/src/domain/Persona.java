@@ -6,20 +6,20 @@ public class Persona {
     private static int contadorPersonas;
     
     static{ //Bloque de inicializacion estatico
-        System.out.println("Ejecucion del bloque estatico");
+        System.out.println("Ejecucion del bloque estático");
         ++Persona.contadorPersonas;
-        
-        
-    }
-    { //Bloque de inicializacion NO estatico (contexto dinamico)
-        System.out.println("Ejecucion del bloque NO estatico");
-        this.idPersona = Persona.contadorPersonas++; //Incrementamos el atributo
-        
+        //idPersona = 10; No es un atributo estatico por esto tenemos un error
     }
     
-    //Los bloques de inicializacion se ejecutan antes del constructor
+    {   // Bloque de inicialización No estático(contexto dinamico)
+        System.out.println("Ejecución del bloque NO estático");
+        this.idPersona = Persona.contadorPersonas++; //Incrementa el atributo
+    }
+ 
+    //Los bloques de inicializacion se ejecutan antes del  constructor
+
     public Persona(){
-        System.out.println("Ejecucion del Constructor");
+        System.out.println("Ejecucion del constructor");
     }
     
     public int getIdPersona(){
@@ -31,4 +31,7 @@ public class Persona {
         return "Persona{" + "idPersona=" + idPersona + '}';
     }
     
+    
+
 }
+

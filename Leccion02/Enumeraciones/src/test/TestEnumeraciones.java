@@ -8,39 +8,37 @@ import enumeraciones.Dias;
 public class TestEnumeraciones {
     public static void main(String[] args) {
         //System.out.println("Dia 1: "+Dias.LUNES);
-        //indicarDiaSemana(Dias.MARTES);//LAS ENUMERACIONES SE TRATAN COMO CADENAS
-        //AHORA NO SE DEBEN UTILIZAR COMILLAS, SE ACCEDE A TRAVES DEL OPERADOR DE PUNTO
-        
-        System.out.println("Continente no. 4: "+Continentes.AMERICA);
-        System.out.println("Numero de paises en el 4to Continente: "
+       // indicarDiaSemana(Dias.LUNES);//Las enumeraciones se tratan como cadenas
+        //Ahora no se deben utilizar comillas, se accede a través de el operador de punto
+        System.out.println("Continente No. 4: "+Continentes.AMERICA);
+        System.out.println("No. de paises en el 4to. continente: "
                 +Continentes.AMERICA.getPaises());
-        System.out.println("Numero de habitantes en el 4to Continente: "
+        System.out.println("No. de habitantes en el 4to. continente: "
                 +Continentes.AMERICA.getHabitantes());
         
-        System.out.println("Continente no. 1: "+Continentes.AFRICA);
-        System.out.println("Numero de paises en el 1er Continente: "
+        System.out.println("Continente No. 1: "+Continentes.AFRICA);
+        System.out.println("No. de paises en el 1er. continente: "
                 +Continentes.AFRICA.getPaises());
-        System.out.println("Numero de habitantes en el 1er Continente: "
+        System.out.println("No. de habitantes en el 1er. continente: "
                 +Continentes.AFRICA.getHabitantes());
         
-        System.out.println("Continente no. 2: "+Continentes.EUROPA);
-        System.out.println("Numero de paises en el 2do Continente: "
-                +Continentes.EUROPA.getPaises());
-        System.out.println("Numero de habitantes en el 2do Continente: "
-                +Continentes.EUROPA.getHabitantes());
-        
-        System.out.println("Continente no. 3: "+Continentes.ASIA);
-        System.out.println("Numero de paises en el 3er Continente: "
-                +Continentes.ASIA.getPaises());
-        System.out.println("Numero de habitantes en el 3er Continente: "
-                +Continentes.ASIA.getHabitantes());
-        
-        System.out.println("Continente no. 5: "+Continentes.OCEANIA);
-        System.out.println("Numero de paises en el 5to Continente: "
+        System.out.println("Continente No. 5: "+Continentes.OCEANIA);
+        System.out.println("No. de paises en el 5to. continente: "
                 +Continentes.OCEANIA.getPaises());
-        System.out.println("Numero de habitantes en el 5to Continente: "
+        System.out.println("No. de habitantes en el 5to. continente: "
                 +Continentes.OCEANIA.getHabitantes());
         
+        System.out.println("Continente No. 3: "+Continentes.ASIA);
+        System.out.println("No. de paises en el 3er. continente: "
+                +Continentes.ASIA.getPaises());
+        System.out.println("No. de habitantes en el 3er. continente: "
+                +Continentes.ASIA.getHabitantes());
+        
+        System.out.println("Continente No. 2: "+Continentes.EUROPA);
+        System.out.println("No. de paises en el 2do. continente: "
+                +Continentes.EUROPA.getPaises());
+        System.out.println("No. de habitantes en el 2do. continente: "
+                +Continentes.EUROPA.getHabitantes());
         
     }
     
@@ -60,14 +58,15 @@ public class TestEnumeraciones {
                 break;
             case VIERNES:
                 System.out.println("Quinto dia de la semana");
-                break;
             case SABADO:
                 System.out.println("Sexto dia de la semana");
                 break;
             case DOMINGO:
                 System.out.println("Septimo dia de la semana");
                 break;
-            
+                         
+                //Agregar todo los dias de la semana
+                //Agregar default
         }
     }
 }
