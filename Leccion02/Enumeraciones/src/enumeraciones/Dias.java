@@ -1,7 +1,6 @@
 
 package enumeraciones;
 
-
 public enum Dias {
     LUNES,
     MARTES,
@@ -9,7 +8,5 @@ public enum Dias {
     JUEVES,
     VIERNES,
     SABADO,
-    DOMINGO,
-            
-            
+    DOMINGO
 }
