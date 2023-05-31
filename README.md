@@ -1,7 +1,8 @@
 # El_paso_tercer_semestre
 
 
-![el_Paso (1)](https://github.com/CodeSystem2022/El_paso_tercer_semestre/assets/102986627/722224c4-cb56-4e24-9cf4-ceabad958586)
+![el paso_ video ‐gif](https://github.com/CodeSystem2022/El_paso_tercer_semestre/assets/102986627/25586503-70c2-4b27-a625-19d2d8d35e3f)
+
 
 
 
