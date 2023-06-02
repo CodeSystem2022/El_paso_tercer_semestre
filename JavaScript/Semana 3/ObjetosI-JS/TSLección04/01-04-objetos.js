@@ -1,77 +1,147 @@
-let x = 10; //variable de tipo primitiva
-console.log(x.length);
-console.log('Tipos primitivos');
-//Objeto
+// OBJETOS
+
+let x = 10; // Variable de tipo primitiva
+console.log(x);
+
+console.log('TIPOS PRIMITIVOS');
+
 let persona = {
-    nombre: 'Carlos',
-    apellido: 'Gil',
-    email: 'cgil@gmail.com',
-    edad: 28,
-    idioma: 'es',
+    nombre: 'Denis',
+    apellido: 'Membrive',
+    edad: 32,
+    email: 'denismembrive3@gmail.com',
+    idioma: 'ES',
+
     get lang(){
-        return this.idioma.toUpperCase(); //Convierte las minúsculas en mayúsculas
+        return this.idioma.toUpperCase();
     },
-    set lang(lang){
-        this.idioma = lang.toUpperCase();
+
+    set lang(Lang){
+
+        this.idioma = this.lang.toUpperCase();
     },
-    nombreCompleto: function(){//método o función e JS
-        return this.nombre+' '+this.apellido;
+
+    
+    nombreCompleto: function(){      // METODO dentro de un objeto
+        return this.nombre + ' ' + this.apellido
+
     },
-    get nombreEdad(){
-        return 'El nombre es: '+this.nombre+' edad: '+this.edad;
+
+    
+    get nombreEdad(){         // Este es el metodo get
+        return 'El nombre es: '+this.nombre+', Edad: '+this.edad; 
     }
+
+   
+
+    // Si ponemos la coma podemos seguir agregando amas atributos o metodos a este objeto
 }
 
 console.log(persona.nombre);
 console.log(persona.apellido);
-console.log(persona.email);
 console.log(persona.edad);
+console.log(persona.email);
 console.log(persona);
-console.log(persona.nombreCompleto());
-console.log('Ejecutando con un objeto');
-let persona2 = new Object(); //Debe crear un nuevo objeto de memoria
-persona2.nombre = 'Juan';
-persona2.direccion = 'Salada 14';
-persona2.telefono = '2604589878';
-console.log(persona2.telefono);
-console.log('Creamos un objeto');
-console.log(persona['apellido']); //Accedemos como si fuera un arreglo
-console.log('Usamos el ciclo for in');
 
-//for in y accedemos al objeto como si fuera un arreglo
+console.log(persona.nombreCompleto());
+
+
+// DIFERENTES FORMAS DE CREAR UN OBJETO
+
+// Forma mas utilizada 
+
+/*let persona = {
+    nombre: 'Denis',
+    apellido: 'Membrive',
+    edad: 30,
+    email: 'denismembrive3@gmail.com',
+    
+    nombreCompleto: function(){      // METODO dentro de un objeto
+        return this.nombre + ' ' + this.apellido
+
+    },
+    // Si ponemos la coma podemos seguir agregando amas atributos o metodos a este objeto
+}
+*/
+
+// Otra forma
+
+console.log('EJECUTANDO CON UN OBJETO');
+let persona2 = new Object();  // Debe crear un nuevo objeto en memoria
+
+persona2.nombre = 'Juan';
+persona2.direccion = 'Sarmiento 1010';
+persona2.telefono = '2604670003';
+
+console.log("Telefono: " + persona2.telefono,"Direccion: " + persona2.direccion);
+
+
+// ACCEDER A LAS PROPIEDADES DE LOS OBJETOS
+
+// Forma mas utilizada 
+
+/*
+console.log(persona.nombre);
+console.log(persona.apellido);
+console.log(persona.edad);
+console.log(persona.email);
+console.log(persona);
+
+console.log(persona.nombreCompleto());
+*/
+
+
+// Otra forma de acceder, no tan utilizada
+
+console.log('CREAMOS UN NUEVO OBJETO');
+console.log(persona['apellido']);// accedemos como si fuera un arreglo
+
+//for in (para recorrer este arreglo al cual se ha tomado el objeto)
+console.log('USAMOS EL CICLO FOR IN');
 for(propiedad in persona){
     console.log(propiedad);
     console.log(persona[propiedad]);
+    console.log(persona[propiedad])
 }
-console.log('cambiamos y eliminamos un error');
-persona.apellido = 'Betancud'; //Cambiamos dinamicamente un valor del objeto
-delete persona.apellido; //Eliminamos el error
-console.log(persona);
-// Distintas dormas de imprimir un objeto
-//Número 1: la más sencilla: concatenar cada valor de cada propiedad
-console.log('Distintas dormas de imprimir un objeto: forma 1');
-console.log(persona.nombre+', '+persona.apellido);
 
-//Número 2: A través del ciclo for in
-console.log('Distintas dormas de imprimir un objeto: forma 2');
+//  Agregar y eliminar propiedades de los Objetos
+console.log('CAMBIAMOS Y ELIMINAMOS UN ERROR');
+persona.apellida = 'Perez';   // Cambiamos dinamicamente un valor del objeto
+delete persona.apellida;  //Eliminamos el nuevo atributo que creamos por error
+
+console.log(persona);
+
+
+// Distintas formas de imprimir un Objeto con: Object.values()  y JSON.stringify(
+
+// Numero 1: la mas sencilla, concatenar cada valor de cada propiedad
+
+console.log('Distintas formas de imprimir un Objeto: FORMA 1');
+console.log(persona.nombre+' , '+persona.apellido);
+
+// Numero 2: atraves del ciclo for in
+console.log('Distintas formas de imprimir un Objeto: FORMA 2');
 for(nombrePropiedad in persona){
     console.log(persona[nombrePropiedad]);
 }
 
-//Número 3: LA función Object.value()
-console.log('Distintas dormas de imprimir un objeto: forma 3');
+// Numero 3: La funcion Object.values()
+console.log('Distintas formas de imprimir un Objeto: FORMA 3');
 let personaArray = Object.values(persona);
 console.log(personaArray);
 
-//Número 4: Utilizamos el método JSON.stringify
-console.log('Distintas dormas de imprimir un objeto: forma 4');
+// Numero 3: Utilizamos el metodo JSON.stringify()
+
+console.log('Distintas formas de imprimir un Objeto: FORMA 4');
 let personaString = JSON.stringify(persona);
 console.log(personaString);
 
-console.log('Comenzamos a utilizar el método get');
+
+console.log('Comenzamos a utilizar el metodo get')
 console.log(persona.nombreEdad);
 
-console.log('Comenzamos con el método get y set para idiomas');
+
+console.log('Comenzamos con el metodo get para idiomas');
 persona.lang = 'en';
 console.log(persona.lang);
 
@@ -83,15 +153,23 @@ function Persona3(nombre, apellido, email){ //Constructor
         return this.nombre+' '+this.apellido;
     }
 }
-let padre = new Persona3('Leo', 'Lopez', 'lopez1@gmail.com');
-padre.nombre = 'Luis'; //modificamos el nombre
-padre.telefono = '01152897852'; //Una propiedad
+
+
+
+let padre = new Persona3('Camilo', 'Troncoso', 'TroncoCamm@gmail.com');
+
+padre.nombre = 'Valentin'; //modificamos el nombre
+padre.telefono = '2604592382'; //Una propiedad
 console.log(padre);
 console.log(padre.nombreCompleto()); //Utilizamos al función
-let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
+
+
+let madre = new Persona3('Nazarena', 'Ibanez', 'inazarena@gmail.com');
 console.log(madre);
 console.log(madre.telefono); //la propiedad no está definida
 console.log(madre.nombreCompleto());
+
+
 
 //Diferentes formas de crear objetos
 //Caso número 1
@@ -100,9 +178,9 @@ let miObjeto = new Object();//Esta es una opción formal
 let miObjeto2 = {}; //Esta opción es breve y recomendada
 
 //Caso String 1
-let miCaddena1 = new String('Hola'); //Sintaxis formal
+let miCaddena1 = new String('Hola Mundo'); //Sintaxis formal
 //Caso String 2
-let miCaddena2 = 'Hola'; //Esta es la sintacis simplificada y recomendada
+let miCaddena2 = 'Hola Mundo'; //Esta es la sintacis simplificada y recomendada
 
 //CAso con números 1
 let miNumero = new Number(1); //Es formal no recomendable
@@ -120,21 +198,21 @@ let miArreglo1 = new Array(); //Formal
 let miArreglo2 = []; //Sintaxis recomendada
 
 //Caso fuction 1
-let miFuncion1 = new function(){}; //Todo después de new es considerado objeto
+let miFuncion1 = new function(){}; 
 //Caso function 2
 let miFuncion2 = function(){}; //Notación simplificada y recomendada
 
 //Uso de prototype
-Persona3.prototype.telefono = '011254898';
+Persona3.prototype.telefono = '2604567123';
 console.log(padre);
 console.log(madre.telefono);
-madre.telefono = '2615849963';
+madre.telefono = '2604567896';
 console.log(madre.telefono);
 
 //Uso de call
 let Persona4 = {
-    nombre: 'Juan',
-    apellido: 'Perez',
+    nombre: 'Sofia',
+    apellido: 'Gettor',
     nombreCompleto2: function(titulo,telefono){
         return titulo+ ': '+this.nombre+' '+this.apellido+' '+telefono;
         //return this.nombre+' '+this.apellido;
@@ -142,13 +220,14 @@ let Persona4 = {
 }
 
 let Persona5 = {
-    nombre:'Carlos',
-    apellido: 'Lara'
+    nombre:'Perla',
+    apellido: 'Pretel'
 }
 
-console.log(Persona4.nombreCompleto2('Lic.', '1142558975'));
-console.log(Persona4.nombreCompleto2.call(Persona5, 'Ing.', '2615897545'));
+console.log(Persona4.nombreCompleto2('Ing.', '23456789'));
+console.log(Persona4.nombreCompleto2.call(Persona5, 'Lic.', '2604560123'));
 
 //Método Apply
-let arreglo = ['Ing.', '2615789854'];
+
+let arreglo = ['Doc.', '2604567803'];
 console.log(Persona4.nombreCompleto2.apply(Persona5, arreglo))
