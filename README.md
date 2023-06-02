@@ -8,11 +8,11 @@
 
 ## Equipo elPaso
 
-* **Javier Reyes** - javy5824@gmail.com - San Rafael
-* **Denis Membrive** - denismembrive@gmail.com - San Rafael
-* **Pablo Perez** - lazarosalvadorguevara@gmail.com - San Rafael
-* **Gonzalo Tapia** - gmtvideo@gmail.com - San Rafael
-* **Ivan Ramirez** - ivanramirez.deo@gmail.com - CABA
-* **Gabriel Caballero** - gabicaballero199@gmail.com - San Rafael
-* **Leonardo Fernández** - leonardofernandez.18zq@gmail.com - San Rafael
-* **Eduardo Adrian Palma** - adrianeduardopalma2@gmail.com - Chubut, Comodoro Rivadavia
+* [**Javier Reyes**](https://github.com/SJReyes) - javy5824@gmail.com - San Rafael
+* [**Denis Membrive**](https://github.com/denismembrive) - denismembrive@gmail.com - San Rafael
+* [**Pablo Perez**](https://github.com/CapitanEspacio) - lazarosalvadorguevara@gmail.com - San Rafael
+* [**Gonzalo Tapia**](https://github.com/Gonza29759452) - gmtvideo@gmail.com - San Rafael
+* [**Ivan Ramirez**](https://github.com/ivanramadeo) - ivanramirez.deo@gmail.com - CABA
+* [**Gabriel Caballero**](https://github.com/gcaballero99) - gabicaballero199@gmail.com - San Rafael
+* [**Leonardo Fernández**](https:/github.com/leonardofer097) - leonardofernandez.18zq@gmail.com - San Rafael
+* [**Eduardo Adrian Palma**](https://github.com/eduardoadrian) - adrianeduardopalma2@gmail.com - Chubut, Comodoro Rivadavia
