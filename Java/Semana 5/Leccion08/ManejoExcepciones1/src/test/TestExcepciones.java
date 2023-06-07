@@ -7,6 +7,18 @@ import excepciones.OperacionException;
 
 public class TestExcepciones {
     public static void main(String[] args) {
+        /*
+        //Código Escrito por Ivan Ramírez
+            int resultado = 0;
+        try{
+            resultado = 10/0;
+        } catch(Exception e){
+            System.out.println("Ocurrió un Error");
+            e.printStackTrace(System.out); //Se conoce como la pila de excepciones
+        }
+        System.out.println("La variable de resultado tiene como valor: "+resultado);
+        
+        */
         int resultado = 0;
         try{             // Utilizamos el metodo de la clase Aritmetica
             resultado  = division(10, 0);    // ArithmeticException, que hereda de RunExeption
