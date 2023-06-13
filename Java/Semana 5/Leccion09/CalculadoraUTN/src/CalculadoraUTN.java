@@ -4,11 +4,14 @@ public class CalculadoraUTN {
         Scanner entrada = new Scanner(System.in);
         while (true) { // Ciclo infinito. Solo terminar al aplicar un break.
             System.out.println("****** Aplicacion Calculadora *******");
+            
+            // Mostramos el menú:
             mostrarMenu();
             var operacion = Integer.parseInt(entrada.nextLine());
             try {
                 if (operacion >= 1 && operacion <= 4) {
                     ejecutarOperacion(operacion, entrada);
+
                 } // Fin if
                 else if (operacion == 5) {
                     System.out.println("Y recuerden amigos... INVESTIGUEN!");
