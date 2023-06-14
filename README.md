@@ -14,5 +14,5 @@
 * [**Gonzalo Tapia**](https://github.com/Gonza29759452) - gmtvideo@gmail.com - San Rafael
 * [**Ivan Ramirez**](https://github.com/ivanramadeo) - ivanramirez.deo@gmail.com - CABA
 * [**Gabriel Caballero**](https://github.com/gcaballero99) - gabicaballero199@gmail.com - San Rafael
-* [**Leonardo Fernández**](https:/github.com/leonardofer097) - leonardofernandez.18zq@gmail.com - San Rafael
+* [**Leonardo Fernández**](https://github.com/leonardofer097) - leonardofernandez.18zq@gmail.com - San Rafael
 * [**Eduardo Adrian Palma**](https://github.com/eduardoadrian) - adrianeduardopalma2@gmail.com - Chubut, Comodoro Rivadavia
