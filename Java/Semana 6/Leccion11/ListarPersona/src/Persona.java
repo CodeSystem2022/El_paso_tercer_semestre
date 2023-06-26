@@ -5,22 +5,19 @@ public class Persona {
     private String email;
     private static int numeroPersonas = 0;
 
-    //Constructor vacío
+
+    //Constructor vacio
     public Persona(){
         this.id = ++Persona.numeroPersonas;
 
     }
-
-    //Constructor con parámetros(sobrecarga de constructores)
+    // Constructor con parametros( Sobrecarga de constructores)
     public Persona(String nombre, String tel, String email){
-        this();
+        this(); // LLamamos al constructor vacio aunque lo hace automaticamente
         this.nombre = nombre;
         this.tel = tel;
         this.email = email;
     }
-
-    //Getters y Setters
-
 
     public int getId() {
         return id;
@@ -54,14 +51,6 @@ public class Persona {
         this.email = email;
     }
 
-    public static int getNumeroPersonas() {
-        return numeroPersonas;
-    }
-
-    public static void setNumeroPersonas(int numeroPersonas) {
-        Persona.numeroPersonas = numeroPersonas;
-    }
-
     @Override
     public String toString() {
         return "Persona{" +
@@ -69,11 +58,7 @@ public class Persona {
                 ", nombre='" + nombre + '\'' +
                 ", tel='" + tel + '\'' +
                 ", email='" + email + '\'' +
-                '}'; //+super.toString() para ver el espacio de memoria
-    }
-
-    public static void main(String[] args) {
-        Persona persona1 = new Persona("Juan Perez", "2334566", "jperez@mail.com");
-        System.out.println(persona1);
+                '}';
     }
 }
+
