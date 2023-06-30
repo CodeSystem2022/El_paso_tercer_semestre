@@ -97,7 +97,7 @@ if __name__ == '__main__':
     Conexion.liberarConexion(conexion4)
     conexion5 = Conexion.obtenerConexion()
     Conexion.liberarConexion(conexion5)
-  # conexion6 = Conexion.obtenerConexion() Excede la cantidad de conexiones disponibles.
+   #conexión = Conexion.obtenerConexion() Excede la cantidad de conexiones disponibles.
 
     '''
     Conexion.obtenerConexion()
