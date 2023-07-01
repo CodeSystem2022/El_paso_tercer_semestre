@@ -1,0 +1,41 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>70</x><y>70</y><w>210</w><h>210</h></coordinates><panel_attributes>Conexion
+--
+-DATABASE: String
+-USERNAME: String
+-PASSWORD: String
+-DB PORT:
+-conexion: conection
+-cursor: Cursor
+--
++obtenerConexion(cls): conection
++obtenerCursor(cls): Cursor
++cerrar(cls): 
+--
+Responsabilidades: Administrar la
+conexion a la base de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>80</y><w>210</w><h>190</h></coordinates><panel_attributes>Persona
+--
+-id_persona: int 
+-nombre: String
+-apellido: String
+-email: String
+--
++__str__(): String
++metodo Get/Set de cada atributo
+--
+Responsabilidades
+Crear objetos de la entidad
+de Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>350</y><w>210</w><h>210</h></coordinates><panel_attributes>PersonaDAO (Data Access Object)
+--
+-Seleccionar: String
+-Insertar: String
+-Actualizar: String
+-Eliminar: String
+--
++seleccionar(cls)
++insertar(cls, persona)
++actualizar(cls, persona)
++eliminar(cls, persona)
+--
+Responsabilidades: Realizar
+operaciones sobre la base de datos
+de la entidad Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>260</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>270</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;80;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>30</x><y>10</y><w>630</w><h>580</h></coordinates><panel_attributes>acceso_datos</panel_attributes><additional_attributes></additional_attributes></element></diagram>
