@@ -130,6 +130,14 @@ public class EstudianteDAO {
 
     public static void main(String[] args) {
         var estudianteDao = new EstudianteDAO();
+        //Modificar estudiantes
+        var estudiantesmodificado = new Estudiante(1, "Juan Carlos", "Juarez", "5544663321", "juen@mail.com");
+        var modificado = estudianteDao.modificarEstudiante(estudiantesmodificado);
+        if (modificado)
+            System.out.println("Estudiante modificado: "+estudiantesmodificado);
+        else
+            System.out.println("No se modifico el estudiante: "+estudiantesmodificado);
+
         //Agregar estudiante
         //var nuevoestudiante = new Estudiante("Carlos","Lara", "5495544223", "carlosl@mail.com");
         //var agregado = estudianteDao.agregarEstudiante(nuevoestudiante);
