@@ -86,10 +86,29 @@ public class EstudianteDAO {
             ps.setString(2, estudiante.getApellido());
             ps.setString(3, estudiante.getTelefono());
             ps.setString(4, estudiante.getEmail());
-    }
+            ps.execute();
+            return true;
+        }catch (Exception e){
+            System.out.println("Ocurrió un error al agregar estudiante: "+e.getMessage());
+        }// Fin catch
+        finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Error al cerrar la conexión: "+e.getMessage());
+            }
+        }
+        return false;
+    }//Fin método agregarEstudiante
 
     public static void main(String[] args) {
         var estudianteDao = new EstudianteDAO();
+
+        //Agregar estudiante
+        var nuevoestudiante = new Estudiante("Carlos","Lara", "5495544223", "carlosl@mail.com");
+        var agregado = estudianteDao.agregarEstudiante(nuevoestudiante);
+        if (agregado)
+           System.out.println("Estudiante agregado: "+nuevoestudiante);
 
         //Listar los estudiantes
         System.out.println("Listado de estudiantes");
@@ -97,12 +116,12 @@ public class EstudianteDAO {
         estudiantes.forEach(System.out::println);//Funcion lambda para imprimir
 
         //Buscar por id
-        var estudiante1 = new Estudiante(1);
-        System.out.println("Estudiantes antes de la busqueda: "+estudiante1);
-        var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
-       if (encontrado)
-           System.out.println("Estudiante encontrado: "+estudiante1);
-       else
-           System.out.println("No se encontro el estudiante: "+estudiante1.getIdEstudiante());
+        //var estudiante1 = new Estudiante(1);
+        //System.out.println("Estudiantes antes de la busqueda: "+estudiante1);
+        //var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
+        //if (encontrado)
+        //   System.out.println("Estudiante encontrado: "+estudiante1);
+        //else
+        //    System.out.println("No se encontro el estudiante: "+estudiante1.getIdEstudiante());
     }
 }
