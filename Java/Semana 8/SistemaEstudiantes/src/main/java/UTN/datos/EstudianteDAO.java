@@ -19,7 +19,7 @@ public class EstudianteDAO {
         //Creamos un objeto de tipo conexión
         Connection con = getConnection();
         String sql = "SELECT * FROM estudiantes2022 ORDER BY idestudiantes2022";
-    try {
+        try {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()){
@@ -45,7 +45,7 @@ public class EstudianteDAO {
         return estudiantes;
     }//Fin método listar
 
-    //Método por id -> find by id
+    //Método por id -> fin by id
     public boolean buscarEstudiantePorId(Estudiante estudiante){
         PreparedStatement ps;
         ResultSet rs;
@@ -75,15 +75,34 @@ public class EstudianteDAO {
         return false;
     }
 
+    //Método agregar un nuevo estudiante
+    public boolean agregarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConnection();
+        String sql = "INSERT INTO estudiantes2022 (nombre, apellido, telefono, email) VALUES(?, ?, ?, ?)";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, estudiante.getNombre());
+            ps.setString(2, estudiante.getApellido());
+            ps.setString(3, estudiante.getTelefono());
+            ps.setString(4, estudiante.getEmail());
+    }
+
     public static void main(String[] args) {
         var estudianteDao = new EstudianteDAO();
+
         //Listar los estudiantes
         System.out.println("Listado de estudiantes");
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println);//Funcion lambda para imprimir
+
+        //Buscar por id
+        var estudiante1 = new Estudiante(1);
+        System.out.println("Estudiantes antes de la busqueda: "+estudiante1);
+        var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
+       if (encontrado)
+           System.out.println("Estudiante encontrado: "+estudiante1);
+       else
+           System.out.println("No se encontro el estudiante: "+estudiante1.getIdEstudiante());
     }
-
-
 }
-
-
