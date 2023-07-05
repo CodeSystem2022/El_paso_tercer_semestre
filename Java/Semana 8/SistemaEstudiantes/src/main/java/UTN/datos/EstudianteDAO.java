@@ -101,19 +101,47 @@ public class EstudianteDAO {
         return false;
     }//Fin método agregarEstudiante
 
+    //Método para modificar estudiante
+    public boolean modificarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConnection();
+        String sql = "UPDATE estudiantes2022 SET nombre=?, apellido=?, telefono=?, email=? WHERE idestudiantes2022=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, estudiante.getNombre());
+            ps.setString(2, estudiante.getApellido());
+            ps.setString(3, estudiante.getTelefono());
+            ps.setString(4, estudiante.getEmail());
+            ps.setString(5, estudiante.getIdEstudiante());
+            ps.execute();
+            return true;
+        }catch (Exception e) {
+            System.out.println("Error al modificar estudiante: " + e.getMessage());
+        }//Fin catch
+        finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Error al cerrar la conexión: "+e.getMessage());
+            }//fin catch
+        }//Fin finally
+        return false;
+    }//Fin método modificarEstudiante
+
     public static void main(String[] args) {
         var estudianteDao = new EstudianteDAO();
-
         //Agregar estudiante
-        var nuevoestudiante = new Estudiante("Carlos","Lara", "5495544223", "carlosl@mail.com");
-        var agregado = estudianteDao.agregarEstudiante(nuevoestudiante);
-        if (agregado)
-           System.out.println("Estudiante agregado: "+nuevoestudiante);
+        //var nuevoestudiante = new Estudiante("Carlos","Lara", "5495544223", "carlosl@mail.com");
+        //var agregado = estudianteDao.agregarEstudiante(nuevoestudiante);
+        //if (agregado)
+        //   System.out.println("Estudiante agregado: "+nuevoestudiante);
 
         //Listar los estudiantes
         System.out.println("Listado de estudiantes");
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println);//Funcion lambda para imprimir
+
+
 
         //Buscar por id
         //var estudiante1 = new Estudiante(1);
